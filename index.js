@@ -33,7 +33,7 @@ mongoose.connect(process.env.MONGODB_URI, { dbName:"task-management-devtown"})
 
 //middleware
 app.use(express.json())
-app.use(cors({ origin: "*" }))
+app.use(cors())
 app.use(morgan("tiny"))
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
